@@ -1,0 +1,49 @@
+﻿<Page x:Class="STROYMELL.Pages.UserPage.HistoryTransactions.HistoryTransactions"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:STROYMELL.Pages.UserPage.HistoryTransactions"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1320" FontFamily="Montserrat"
+      Title="HistoryOfTransactions" Height="1080" Width="1920">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFCE664F"/>
+                <GradientStop Color="#FFC5B270" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <ui:Button x:Name="GoBackbtn" Width="85" VerticalAlignment="Top" HorizontalAlignment="Left" Click="GoBackbtn_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" FontWeight="Bold" Margin="90,10,0,0" Height="130">
+            <TextBlock Text="←" FontSize="96" Height="126" Width="60"/>
+        </ui:Button>
+        <ListView Name="ListHistoryGames" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="100,150,100,100" BorderBrush="#FFFFD200" FontWeight="Bold" Foreground="Black" Background="White">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Name_Transaction}" Value="Вывод">
+                            <Setter Property="Background" Value="Red"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <!-- Устанавливаем белый цвет текста -->
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Name_Transaction}" Value="Пополнение">
+                            <Setter Property="Background" Value="Green"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <!-- Устанавливаем белый цвет текста -->
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ID_Transaction}" Width="120" Header="ID ТРАНЗАКЦИИ"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name_Transaction}" Width="300"  Header="ТИП ОПЕРАЦИИ"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Sum_of_withdrawal}" Width="300" Header="СУММА ОПЕРАЦИИ"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Date}" Width="300" Header="ДАТА ОПЕРАЦИИ"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

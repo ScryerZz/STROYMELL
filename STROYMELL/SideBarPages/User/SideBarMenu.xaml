@@ -1,0 +1,31 @@
+﻿<Page x:Class="STROYMELL.SideBarPages.User.SideBarMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:STROYMELL.SideBarPages.User"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="200"
+      Title="SideBarMenu" FontFamily="Montserrat">
+
+    <Grid Width="200">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ui:Button x:Name="HomePage" Content="ГЛАВНАЯ" Foreground="#E4FFFFFF" Background="{x:Null}" BorderBrush="{x:Null}" Width="170" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Row="2" Click="HomePage_Click" HorizontalAlignment="Center" Margin="0,25,0,25"/>
+        <ui:Button Content="EXIT" Foreground="#fff" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="6" FontSize="24" HorizontalContentAlignment="Center" Click="ButtonLeft_Click" VerticalContentAlignment="Center" FontWeight="Bold" Margin="15,25,15,25" />
+        <ui:Button x:Name="Profile" Content="" Foreground="#E4FFFFFF" Background="{x:Null}" BorderBrush="{x:Null}" Width="170" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Grid.Row="1" Click="Profile_Click" HorizontalAlignment="Center" Margin="0,25,0,25"/>
+        <ui:Button x:Name="AllGames" Content="ИГРЫ" Foreground="#E4FFFFFF" Background="{x:Null}" BorderBrush="{x:Null}" Width="170" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Grid.Row="3" Click="AllGames_Click" HorizontalAlignment="Center" Margin="0,25,0,25"/>
+    </Grid>
+</Page>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="STROYMELL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:STROYMELL"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        WindowStyle="None"
+        WindowState="Maximized" 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="FrameSideBar">
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCE664F"/>
+                    <GradientStop Color="#FFC5B270" Offset="1"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+        </Frame>
+        <Image Source="UIKIT/Background.png" Stretch="Fill" Grid.Column="1"/>
+        <Frame x:Name="frame" Content="Frame" HorizontalAlignment="Left" Source="" VerticalAlignment="Center" Grid.Column="1" Navigated="Frame_Navigated"/>
+    </Grid>
+</Window>

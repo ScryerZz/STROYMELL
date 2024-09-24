@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d4d66fa9799046deb604243115a42a93" Name="Diagram1">
+        <EntityTypeShape EntityType="casinoModel.Banks" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="casinoModel.FundsDeposits" Width="1.5" PointX="7.5" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="casinoModel.FundsWithdrawals" Width="1.5" PointX="7.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="casinoModel.HistoryRounds" Width="1.5" PointX="7.5" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="casinoModel.HostoryMatches" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="casinoModel.Matches" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="casinoModel.Reports" Width="1.5" PointX="5.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="casinoModel.Roles" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="casinoModel.Rounds" Width="1.5" PointX="5.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="casinoModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="casinoModel.Transactions" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="casinoModel.Users" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="casinoModel.FK_FundsDeposits_Transactions" ManuallyRouted="false" />
+        <AssociationConnector Association="casinoModel.FK_FundsWithdrawals_Transactions" ManuallyRouted="false" />
+        <AssociationConnector Association="casinoModel.FK_HistoryRounds_HostoryMatches" ManuallyRouted="false" />
+        <AssociationConnector Association="casinoModel.FK_HistoryRounds_Rounds" ManuallyRouted="false" />
+        <AssociationConnector Association="casinoModel.FK_HostoryMatches_Matches" ManuallyRouted="false" />
+        <AssociationConnector Association="casinoModel.FK_HostoryMatches_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="casinoModel.FK_Rounds_Matches" ManuallyRouted="false" />
+        <AssociationConnector Association="casinoModel.FK_Reports_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="casinoModel.FK_Users_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="casinoModel.FK_Transactions_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

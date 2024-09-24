@@ -1,0 +1,49 @@
+﻿<Page x:Class="STROYMELL.Pages.UserPage.ProfilePageUser.ProfilePageUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:STROYMELL.Pages.UserPage.ProfilePageUser"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920" FontFamily="Montserrat"
+      Title="ProfilePageUser" Height="1080" Width="1920">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFCE664F"/>
+                <GradientStop Color="#FFC5B270" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ui:Button x:Name="Replenish" Click="Replenish_Click" Grid.Column="1" Height="85" Margin="130,0,130,0" Grid.Row="5" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" BorderThickness="0,0,0,2">
+            <ui:TextBlock Text="ПОПОЛНИТЬ" FontSize="48"/>
+        </ui:Button>
+        <ui:Button x:Name="Conclusion" Click="Conclusion_Click" Grid.Column="2" Height="85" Margin="170,0,170,0" Grid.Row="5" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" BorderThickness="0,0,0,0">
+            <ui:TextBlock Text="ВЫВЕСТИ" FontSize="48"/>
+        </ui:Button>
+        <ui:TextBlock x:Name="LabelName" Text="ПОЛЬЗОВАТЕЛЬ:" FontSize="32" HorizontalAlignment="Left" Height="55" VerticalAlignment="Center" Width="1233" Foreground="White" Background="{x:Null}" FontStyle="Italic" Grid.Row="1" Grid.ColumnSpan="2" Margin="47,0,0,0" FontWeight="Bold"/>
+        <ui:TextBlock x:Name="LabelDate" Text="ДАТА РЕГИСТРАЦИИ:" FontSize="32" HorizontalAlignment="Left" Height="55" Margin="40,0,0,0" VerticalAlignment="Center" Width="1240" Foreground="White" Grid.Row="3" Background="{x:Null}" Grid.ColumnSpan="2" FontStyle="Italic" FontWeight="Bold"/>
+        <ui:TextBlock x:Name="LabelBalance" Text="БАЛАНС:" FontSize="32" HorizontalAlignment="Left" Height="55" Margin="40,0,0,0" VerticalAlignment="Center" Width="600" Foreground="White" Grid.Row="5" Background="{x:Null}" FontStyle="Italic" FontWeight="Bold"/>
+        <ui:Button x:Name="HistoryOfTranzactions" Height="82" Margin="183,35,183,0" VerticalAlignment="Top" Click="HistoryOfTranzactions_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" BorderThickness="0,0,0,0" FontWeight="Bold" Grid.Row="2" Grid.Column="2">
+            <ui:TextBlock Text="ИСТОРИЯ" FontSize="48"/>
+        </ui:Button>
+        <!--<ui:Button x:Name="EditProfile" Height="82" Margin="20,35,20,0" VerticalAlignment="Top" Click="EditProfile_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" BorderThickness="0,0,0,0" FontWeight="Bold" Grid.Row="1" Grid.Column="2">
+            <ui:TextBlock Text="РЕДАКТИРОВАТЬ ПРОФИЛЬ" FontSize="36"/>
+        </ui:Button>-->
+    </Grid>
+</Page>
